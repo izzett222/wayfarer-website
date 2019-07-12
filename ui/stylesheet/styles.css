@@ -144,7 +144,7 @@ footer ul li a{
 }
 /*login page css properties*/
 section{
-  background-image: url("images/homepage.png");
+  background-image: url("../images/homepage.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
