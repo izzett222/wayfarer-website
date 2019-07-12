@@ -1,3 +1,5 @@
+
+/*home page css properties*/
 *{
   margin: 0;
   padding: 0;
@@ -43,7 +45,7 @@ header nav ul li a{
 .intro{
   width: 100%;
   height:calc(100vh - 120px);
-  background-image: url("images/backgroundimg.jpeg");
+  background-image: url("../images/bus.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -139,4 +141,86 @@ footer ul li a{
 .footer-icons img{
   width:100%;
   margin-bottom: 10px;
+}
+/*login page css properties*/
+section{
+  background-image: url("images/homepage.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height:60vh;
+  background-position: center;
+  font-family: Catamaran;
+
+
+}
+.login-section{
+  width:100%;
+  padding: 70px 30px;
+
+}
+.login-section h1{
+  margin:0;
+  padding:0 0 20px;
+  text-align:center;
+  font-size: 25px;
+}
+
+.Login-section p{
+  margin: 0;
+  padding:0;
+  font-weight: bold;
+
+}
+.login-section input{
+
+
+  margin-bottom: 20px;
+}
+.login-section input[type="text"], input[type="password"]{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 30px;
+  width:320px;
+  color: #222;
+  font-size: 18px;
+}
+.login-section input[type="submit"]{
+  border: none;
+  outline: none;
+  height:40px;
+  width:70px;
+  border-radius: 7px;
+  margin: 0 0 0 100px ;
+}
+.login-section input[type="submit"]:hover{
+  cursor: pointer;
+  background-color: green;
+}
+.login-section a:hover{
+  text-decoration: underline;
+  color: green;
+
+}
+@media only screen and (min-width:700px){
+
+  .login-section{
+    width:380px;
+    height: 340px;
+    background: rgba(0,0,0,0.5);
+    padding: 70px 30px;
+    margin: 0 auto;
+
+
+  }
+  .login-section p{
+    color: white;
+  }
+
+.login-section input[type="text"], input[type="password"]{
+  color: white;
+}
+
 }
