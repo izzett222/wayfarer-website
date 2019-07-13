@@ -307,8 +307,8 @@ section{
 }
 
 }
-/*trips page css*/
-.trips-table{
+/*trips and bookings page css*/
+.table-page{
   font-family: Catamaran;
   font-size: 20px;
   background-image: url("../images/desertroad1.jpg");
@@ -330,42 +330,49 @@ section{
   color: #F0E130;
   background-color:#A8A782;
 }
-.trips-table table{
+.table-page table{
   margin: 0 auto;
   width: 80%;
   text-align: center;
 }
-.trips-table tr td:last-of-type{
+.table-page tr td:last-of-type{
   border-radius: 10px;
   border: 0;
 }
-.trips-table tr td:hover{
+.table-page td:last-child:hover{
   background:  #F0E130;
   color: black;
 }
 td[colspan="3"]{
   background:#A8A782;
 }
-.trips-table table, th, td{
+.table-page table, th, td{
   border:1px solid #111;
   border-collapse: collapse;
-  opacity:0.90;
+
 
 }
-.trips-table th td{
+
+.table-page th td{
   padding: 10px;
   text-align: center;
 
 }
-.trips-table th{
+.table-page th{
   background-color: #a70000;
   color:white;
 }
-.trips-table tr:nth-child(even){
+.table-page tr:nth-child(even){
   background-color : #E1D5F5;
 
 }
-.trips-table tr:nth-child(odd){
+.table-page tr:nth-child(odd){
   background-color: #332D3D;
   color:#F0E130;
+}
+.menu-item-marker{
+  border:1px solid #A8A782;
+  border-radius: 15px;
+  padding: 20px 20px 0 20px;
+  background-color: #A8A782;
 }
