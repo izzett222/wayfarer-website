@@ -1,0 +1,101 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+main{
+  width:80%;
+  margin:auto;
+}
+.main{
+  margin-top: 100px;
+  background: #B3B252;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px 1fr;
+  color: #ffc;
+
+}
+.trip{
+  background: #9068be;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "code code"
+                       "origin departure"
+                       "destination arrival"
+                       "seats seats"
+                       "agency book-button";
+text-align: center;
+box-shadow:2px 2px 15px #9068be;
+border-radius: 10px;
+
+
+}
+.trip-code{
+  grid-area: code;
+  padding-bottom: 50px;
+
+}
+.origin{
+  grid-area:origin
+
+}
+.destination{
+  grid-area: destination;
+
+}
+.time-dep{
+  grid-area:departure;
+}
+.time-arr{
+  grid-area:arrival
+}
+.seats{
+  grid-area: seats;
+}
+.agency{
+  grid-area:agency;
+  justify-self:center;
+}
+.trip a{
+  grid-area:book-button;
+}
+.title{
+  font-weight: 600;
+  font-size: 20px;
+}
+.info{
+  font-weight: bold;
+  font-family: Catamaran;
+  font-size: 25px;
+}
+.book-button{
+
+    background:#fb7064;
+    background: linear-gradient(#fb7064, #e74438);
+    border-radius:9px;
+    box-shadow: 0 3px #ab140a;
+    padding: 9px 20px;
+    color: #ffffff;
+    display: inline-block;
+    font:normal normal 21px/1 "Overlock", cursive;
+    text-align: center;
+    text-shadow:1px 1px #ab140a;
+    align-self: center;
+    justify-self:center;
+}
+.back{
+  justify-self:left;
+  margin-left: 10px;
+  box-shadow:1px 2px 5px #113;
+}
+@media only screen and (max-width:370px){
+  main{
+    width:100%;
+    margin:auto;
+  }
+
+}
