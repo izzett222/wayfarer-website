@@ -2,60 +2,60 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheet/signup.css">
     <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../stylesheet/styles.css">
     <title>signup wayfarer</title>
   </head>
-  <body>
-    <header>
-      <a class="brand-logo" href="../index.html">wayfarer</a>
-      <nav>
-        <ul>
-          <li><a href="login.html">login</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">contacts</a></li>
-        </ul>
-      </nav>
+  <body class="wrapper">
+    <header class="header">
+      <a href="../../index.html" class="logo">wayfarer</a>
+      <div class="menu">
+        <a href="login.html">login</a>
+        <a href="#">about</a>
+        <a href="#">contacts</a>
+      </div>
     </header>
     <main>
-      <section class="signup-sect">
-        <div class="signup-section">
-          <h1>signup here</h1>
-          <form>
-            <p>Full name</p>
-            <input type="text" name="fullname" placeholder="Enter your full name">
-            <p>Gender</p>
-            <input type="text" name="gender" placeholder="Enter your gender">
-            <p>Country</p>
-            <input type="text" name="country" placeholder="enter your country">
-            <p>Email</p>
-            <input type="email" name="email" placeholder="Enter your email">
-            <p>Contacts</p>
-            <input type="number" name="phone number" placeholder="Enter your number">
-            <p>username</p>
-            <input type="text" name="username" placeholder="create your username">
-            <p>password</p>
-            <input type="password" name="password" placeholder="create your password"><br>
-            <input type="submit" name="submit" value="sign up">
-            <a href="#">login</a>
+      <section>
+      <div class="signup-section">
+        <h1>Login here</h1>
+         <!-- data like name,email,country,password
+        signup input field for -->
+        <form>
+          <p>full name</p>
+          <input type="text" name="fullname" placeholder="Enter your full name">
+          <p>Gender</p>
+          <input type="text" name="gender" placeholder="Enter your gender">
+          <p>Country</p>
+          <input type="text" name="country" placeholder="enter your country">
+          <p>Email</p>
+          <input type="email" name="email" placeholder="Enter your email">
+          <p>Contacts</p>
+          <input type="number" name="phone number" placeholder="Enter your number">
+          <p>username</p>
+          <input type="text" name="username" placeholder="enter your username">
+          <p>password</p>
+          <input type="password" name="password" placeholder="Enter your password"><br>
+          <input type="submit" name="submit" value="sign up">
+          <a href="login.html">login</a>
 
-          </form>
-        </div>
-
+        </form>
+      </div>
       </section>
+
     </main>
-    <footer>
-      <ul>
-        <li><a href="../index.html">home</a></li>
-        <li><a href="#">about</a></li>
-        <li><a href="#">contacts</a></li>
-      </ul>
-      <div class="footer-icons">
-        <a href="#"><img src="../images/youtube-logo-png-46017.png" width="100" alt="youtube logo"></a>
-        <a href="#"><img src="../images/twitter-icon-95.png" width="60" alt="twitter logo"></a>
+    <footer class="footer">
+      <div class="footer-menu">
+        <a href="../../index.html">home</a>
+        <a href="#">about</a>
+        <a href="#">contacts</a>
+      </div>
+      <div class="icons-home">
+        <img src="../images/youtube-logo-png-46017.png" alt="facebook icon" width="100px">
+        <img class="twitter-icon" src="../images/twitter-icon-95.png" alt="twitter icon" width="45px">
       </div>
     </footer>
+
   </body>
 </html>

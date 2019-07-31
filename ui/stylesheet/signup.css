@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* wrapper contains the css grid for mobile with 1 column and 3 rwos(the middle one is bigger)  */
+.wrapper{
+  
+  background: #9068be;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  /* height: 120vh; */
+  grid-template-areas:"header"
+                      "main"
+                      "footer";
+}
+/* header section with logo and menu */
+.header{
+  /* background: #9068be; */
+  color:#fff;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas: "logo"
+                       "menu";
+  
+}
+.header a{
+  color:#ffd;
+}
+.menu{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 10px;
+  font-family: Catamaran;
+  font-size: 18px;
+  justify-items:center;
+}
+.logo{
+  justify-self:center;
+  align-self: center;
+  font-family: Catamaran;
+  font-size:25px;
+  padding: 20px;
+}
+/* signup section also a css grid with one column */
+section{
+  overflow-y:auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* background-color:  #e1e8f0; */
+  font-family: Catamaran;
+
+
+}
+.signup-section{
+  margin: 0 auto;
+  padding: 70px 0 10px 0px;
+
+}
+.signup-section h1{
+  margin:0;
+  padding:0 0 20px;
+  text-align:center;
+  font-size: 25px;
+  
+  color: rgb(208, 224, 222);
+}
+
+.signup-section p{
+  margin: 0;
+  padding:0;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(208, 224, 222);
+
+}
+.signup-section input{
+
+
+  margin-bottom: 20px;
+}
+.signup-section input[type="text"], input[type="password"],input[type="email"],input[type="number"]{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 30px;
+  width:320px;
+  color: rgb(233, 243, 236);
+  font-size: 18px;
+}
+.signup-section input[type="submit"]{
+  border: none;
+  outline: none;
+  height:40px;
+  width:70px;
+  border-radius: 7px;
+  margin: 0 0 0 100px ;
+}
+.signup-section input[type="submit"]:hover{
+  cursor: pointer;
+  background-color: green;
+}
+.signup-section a:hover{
+  text-decoration: underline;
+  color: green;
+
+}
+.signup-section a{
+  color: rgb(208, 224, 222);
+}
+/* default footer */
+.footer{
+  background-color: #57585C;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+.footer-menu{
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+.footer-menu a{
+  color:#ffd;
+}
+.icons-home{
+  display: grid;
+  grid-template-columns: 100px;
+  grid-template-rows: 70px 70px;
+
+}
+.twitter-icon{
+  align-self: center;
+  justify-self:center;
+}
+.test1, .test2{
+  display:none;
+}
+/* computer and tablet design */
+@media only screen and (min-width:500px) {
+
+.wrapper{
+  grid-template-rows: 70px 10fr 3fr;
+}
+.header{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.menu{
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  grid-row: 10px;
+  align-items: center;}
+  .logo{
+    border-right: 2px solid #57585C;
+  }
+  section{
+    /* background: #e62739; */
+    /* height: 120vh; */
+  }
+  .signup-section{
+    margin-top: 20px;
+    width:380px;
+    height: 760px;
+    background: rgba(0,0,0,0.5);
+    padding: 70px 30px;
+    
+
+
+
+  }
+  .signup-section p{
+    color: white;
+  }
+
+.signup-section input[type="text"], input[type="password"]{
+  color: white;
+}
+
+
+.footer{
+  background-color: #57585C;
+}
+
+}
