@@ -5,12 +5,12 @@
   text-decoration: none;
 }
 
-
+/* mobileperspective cssgrid with 3 section header,main and footer */
 .wrapper{
   display: grid;
-  grid-template-columns: : 2fr;
-  grid-template-rows: 1fr 4fr 1fr;
-  height: 100vh;
+  grid-template-columns: 2fr;
+  grid-template-rows: 100px 8fr 100px;
+  /* height: 100vh; */
   grid-template-areas:"header"
                       "main"
                       "footer";
@@ -45,6 +45,7 @@
   padding: 20px 20px 20px 20px;
 }
 .main{
+  overflow-y:auto;
   text-align: center;
   display: grid;
   grid-template-columns: 1fr;
