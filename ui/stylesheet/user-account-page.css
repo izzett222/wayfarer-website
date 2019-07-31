@@ -10,7 +10,7 @@
   display: grid;
   grid-template-columns: : 2fr;
   grid-template-rows: 1fr 4fr 1fr;
-  height: 100vh;
+  height: 130vh;
   grid-template-areas:"header"
                       "main"
                       "footer";
@@ -44,63 +44,6 @@
   font-size:25px;
   padding: 20px 20px 20px 20px;
 }
-.main{
-  text-align: center;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows:30px;
-  grid-auto-rows: 40px;
-  grid-row-gap: 5px;
-  font-size: 18px;
-  font-weight: 400;
-  background-color: #e1e8f0;
-
-
-}
-.child-grid{
-  display: grid;
-  grid-template-columns: 1fr 2fr 2fr 1fr 1fr;
-}
-
-.main div:nth-child(even){
-  background-color:#DCDCDC;
-}
-.main div:nth-child(odd){
-  background-color: #A9A9A9;
-}
-.main div div:nth-child(even){
-  background-color: inherit;
-}
-.main div div:nth-child(odd){
-  background-color: inherit;
-}
-.trips-menu{
-
-  font-family: Catamaran;
-  font-weight: 900;
-}
-.child-grid div, a{
-  padding-top: 9px;
-}
-#title{
-  font-size: 25px;
-  justify-self:center;
-  padding-top: 5px;
-  font-weight: bolder;
-  background-color:inherit;
-  color:#112;
-}
-
-
-
-
-
-
-
-
-
-
-
 .footer{
   background-color: #57585C;
   display: grid;
