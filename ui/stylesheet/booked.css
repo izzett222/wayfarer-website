@@ -17,7 +17,8 @@ main{
   grid-template-rows: 40px 1fr;
   color: #ffc;
 }
-.book-info{
+/* used a css grid with 3 colums and 4 rows for the booking info*/
+.book-info{ 
   background: #9068be;
   display:grid;
   grid-template-columns: 1fr 2fr 1fr;
