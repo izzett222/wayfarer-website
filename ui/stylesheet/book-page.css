@@ -18,6 +18,7 @@ main{
   color: #ffc;
 
 }
+/* css grid with 3 column and 4 rows */
 .book-info{
   background: #9068be;
   display:grid;
