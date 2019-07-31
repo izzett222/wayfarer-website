@@ -1,3 +1,6 @@
+
+/* removes bowser default settings */
+
 *{
     margin: 0;
     padding: 0;
@@ -6,17 +9,21 @@
 }
 
 
+/* the whole page wrapper used to set grid of the page */
 .wrapper{
+  background-color:#9068be;
   display: grid;
-  grid-template-columns: : 2fr;
+  grid-template-columns: 2fr;
   grid-template-rows: 1fr 4fr 1fr;
   height: 130vh;
   grid-template-areas:"header"
                       "main"
                       "footer";
 }
-.header{
-  background: #9068be;
+
+ /* the header css */
+.header{ 
+  /* border-bottom: 2px solid #DAC7F0; */
   color:#fff;
   grid-area: header;
   display: grid;
@@ -44,16 +51,19 @@
   font-size:25px;
   padding: 20px 20px 20px 20px;
 }
+
+/* main body css which contain the mobile perspective css grid  */
 .main{
-  background-color: #e1e8f0;
+  /* background-color:#9068be; */
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr 1fr 1fr;
 
 
 }
+/* intro css which contain the design and style for the page info section */
 .intro{
-  background-image: url("../images/bus.jpeg");
+  /* background-image: url("../images/bus.jpeg"); */
   background-position: center;
 
   background-size: cover;
@@ -67,18 +77,64 @@
 font-size: 34px;
 }
 .intro p{
+
+  padding: 2px;
   line-height: 22px;
   font-size: 23px;
 }
+#quality1{
+  margin-top: 20px;
+  margin-left: 7px;
+  display: flex;
+  justify-content: space-around;
+}
+#quality1 h3{
+  text-align: left;
+  margin-left: 10px;
+  font-size: 16px;
+}
+#quality1 img {
+  width: 60px;
+  height: 80px;
+}
+#quality2 img {
+  width: 60px;
+  height:80px;
+}
+#quality1 p{
+  display: hidden;
+  font-size: 16px;
+  text-align: left;
+  margin-left: 10px;
+  width:80%;
+  line-height: 20px;
+
+}
+#quality2{
+ margin-top: 15px;
+ margin-left: 7px;
+ display: flex;
+ justify-content: space-around;
+ width:80%;
+}
+#quality2 h3{
+  text-align: left;
+  margin-left: 10px;
+  font-size: 16px;
+}
+#quality2 p{
+ display: hidden;
+ font-size: 16px;
+ text-align: left;
+ margin-left: 10px;
+ line-height: 20px;
+}
 .signup-home{
   text-align: center;
-  background-color:  #912C30;
+  /* background-color:  #d3866e; */
   border-radius: 8px;
   margin:0 auto;
   width:90%;
-
-
-
 
 }
 .signup-button{
@@ -91,7 +147,6 @@ font-size: 34px;
   display: inline-block;
   font:normal normal 21px/1 "Overlock", cursive;
   text-align: center;
-  text-shadow:1px 1px #ab140a;
   }
 .signup-button:hover {
 	background-color:#5cbf2a;
@@ -104,27 +159,38 @@ font-size: 34px;
   color: #ffd;
   font-size: 18px;
   margin-bottom: 5px;
+
+
 }
 .margin{
   margin:5px;
+  box-shadow: 0 3px 3px #5A2C8F;
+  height: 90%;
+  border-radius:4px;
+
 }
 .margin2{
   margin:5px;
+  box-shadow: 0 5px 3px #5A2C8F;
+  height: 90%;
+  border-radius:5px;
 }
 .login-home{
-  background-color: #d3866e;
+
   color:#ffd;
   border-radius: 8px;
   margin:0 auto;
   width:90%;
   text-align: center;
-
 }
 .login-home p{
   color: #ffd;
   font-size: 18px;
   margin-bottom: 5px;
 }
+
+/* button design */
+
 .login-button{
   background: #fb7064;
   background: linear-gradient(#fb7064, #e74438);
@@ -137,6 +203,9 @@ font-size: 34px;
   text-align: center;
   text-shadow:1px 1px #ab140a;
   }
+
+  /* footer cs,used a grid with two columns where one ontains links and the other icons of popular site which yocan click to visit those site */
+
 .footer{
   background-color: #57585C;
   display: grid;
@@ -169,10 +238,15 @@ font-size: 34px;
 .intro p:nth-child(odd){
   display: none;
 }
+
+/* computer user design it differs the mobile design on the main part,the computer design contain many section which includes the intro section, two side section for login and signup
+and a testimony part to show user experience on the site   */
 @media only screen and (min-width:500px) {
 
 .wrapper{
-  grid-template-rows: 70px 10fr 3fr;
+  grid-template-rows: 70px 12fr 3fr;
+  background-color: #9068be;
+
 }
 .header{
   display: grid;
@@ -194,15 +268,19 @@ font-size: 34px;
                        "banner banner banner banner signup signup"
                        "banner banner banner banner login login"
                        "test1 test1 test2 test2  login login";
-background-color: #bea768;
+
+/* background-color: #bea768; */
+
 
 }
 .intro{
 
-   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bus.jpeg') no-repeat center cover fixed;
+
+   /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bus.jpeg') no-repeat center cover fixed; */
    background-position: center;
   grid-area: banner;
-  border-radius: 10px;
+  border-radius: 5px;
+
   display: block
 
 }
@@ -213,6 +291,59 @@ background-color: #bea768;
   font-size:40px;
   line-height: 50px;
 }
+
+.service-quality{
+  display:flex;
+  justify-content: space-around;
+}
+
+#quality1{
+  margin-top: 70px;
+  margin-left: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+#quality1 h3{
+  text-align: left;
+  margin-left: 10px;
+  padding-bottom: 5px;
+  font-size: 23px;
+}
+#quality1 img {
+  width: 40px;
+}
+#quality2 img {
+  width: 40px;
+}
+#quality1 p{
+  font-size: 19px;
+  text-align: left;
+  margin-left: 10px;
+  width:80%;
+  line-height: 20px;
+
+}
+#quality2{
+ margin-top: 70px;
+ margin-left: 7px;
+ display: flex;
+ justify-content: space-around;
+ width:80%;
+}
+#quality2 h3{
+  text-align: left;
+  margin-left: 10px;
+  padding-bottom: 5px;
+  font-size: 23px;
+}
+#quality2 p{
+ display: hidden;
+ font-size: 21px;
+ text-align: left;
+ margin-left: 10px;
+ line-height: 20px;
+}
+
 .signup-home{
   grid-area:signup;
   align-self: center;
