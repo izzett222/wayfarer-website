@@ -5,7 +5,9 @@
     text-decoration: none;
 }
 
-
+/* the css grid for the whole page which contain 1 column and 3 rows(middle one is bigger) for mobile users.
+the grid contains a header section,the main section and the footer section where the main section(or login section)
+is bigger */
 .wrapper{
   background: #9068be;
   width: 100%;
@@ -30,9 +32,11 @@
 .header a{
   color:#ffd;
 }
+/* the menu in the header also contain its own css grid which contain links for easy access,the grid has one row and 4 columns
+are identical and the links are centered arround the area as shown below */
 .menu{
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(3,1fr);
   grid-gap: 10px;
   font-family: Catamaran;
   font-size: 18px;
@@ -46,6 +50,8 @@
   font-size:25px;
   padding: 20px 20px 20px 20px;
 }
+/* login section has two design for mobile user and (tablet and computer users).this one below is for mobile user which has one column
+that fills the whole screen */
 section{
   display: grid;
   grid-template-columns: 1fr;
@@ -75,12 +81,13 @@ section{
   font-size: 21px;
 
 }
+/* the css below contains design for the form which create better input field and information which is useful for the user */
 .login-section input{
 
 
   margin-bottom: 20px;
 }
-.login-section input[type="text"], input[type="password"]{
+.login-section input[type="email"], input[type="password"]{
   border: none;
   border-bottom: 1px solid #fff;
   background: transparent;
@@ -138,13 +145,14 @@ section{
   align-self: center;
   justify-self:center;
 }
-
+/* computer and tablet properties which are different from the mobile ones */
 @media only screen and (min-width:500px) {
-
+/* here the grid change as the body becomes much bigger than the footer and header,there is only one column here too */
 .wrapper{
   grid-template-rows: 70px 10fr 3fr;
 }
-.header{
+/*grid for the header section has two element the logo and menu*/
+.header{ 
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
