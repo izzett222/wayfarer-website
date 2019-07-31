@@ -18,6 +18,7 @@ main{
   color: #ffc;
 
 }
+/* used a css grid with  2 column and 5 rows to make the card */
 .trip{
   background: #9068be;
   display: grid;
@@ -34,32 +35,40 @@ border-radius: 10px;
 
 
 }
+/* take the area with code as its name in the grid */
 .trip-code{
   grid-area: code;
   padding-bottom: 50px;
 
 }
+/* take the area with origin as its name in the grid */
 .origin{
   grid-area:origin
 
 }
+/* take the area with destination as its name in the grid */
 .destination{
   grid-area: destination;
 
 }
+/* take the area with departure as its name in the grid */
 .time-dep{
   grid-area:departure;
 }
+/* take the area with arrival as its name in the grid */
 .time-arr{
   grid-area:arrival
 }
+/* take the area with seats as its name in the grid */
 .seats{
   grid-area: seats;
 }
+/* take the area with agency as its name in the grid */
 .agency{
   grid-area:agency;
   justify-self:center;
 }
+/* take the area with book-button as its name in the grid */
 .trip a{
   grid-area:book-button;
 }
@@ -92,6 +101,7 @@ border-radius: 10px;
   margin-left: 10px;
   box-shadow:1px 2px 5px #113;
 }
+/* computer and tablet design */
 @media only screen and (max-width:370px){
   main{
     width:100%;
