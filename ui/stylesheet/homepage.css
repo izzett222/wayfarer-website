@@ -1,390 +1,225 @@
-
-/* removes bowser default settings */
-
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: grid;
+  width:100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 1fr;
+}
+header{
+  background-color: rgb(246, 242, 242);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+header a{
   text-decoration: none;
 }
 
-
-/* the whole page wrapper used to set grid of the page */
-.wrapper{
-  background-color:#9068be;
-  display: grid;
-  grid-template-columns: 2fr;
-  grid-template-rows: 1fr 4fr 1fr;
-  height: 130vh;
-  grid-template-areas:"header"
-                      "main"
-                      "footer";
-}
-
- /* the header css */
-.header{ 
-  /* border-bottom: 2px solid #DAC7F0; */
-  color:#fff;
-  grid-area: header;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 3fr 1fr;
-  grid-template-areas: "logo"
-                       "menu";
-}
-.header a{
-  color:#ffd;
-}
-.menu{
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  grid-gap: 10px;
-  font-family: Catamaran;
-  font-size: 18px;
-  justify-items:center;
-
-}
 .logo{
-  justify-self:center;
-  align-self: center;
-  font-family: Catamaran;
-  font-size:25px;
-  padding: 20px 20px 20px 20px;
+  margin-left:40px;
+  font-family: 'Lobster', cursive;
+  font-size: 27px;
+  color:rgb(22, 22, 22);
 }
-
-/* main body css which contain the mobile perspective css grid  */
-.main{
-  /* background-color:#9068be; */
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 2fr 1fr 1fr;
-
+.menu a{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 17px;
+  color:rgb(22, 22, 22);
+  
+  font-weight: 300;
 
 }
-/* intro css which contain the design and style for the page info section */
-.intro{
-  /* background-image: url("../images/bus.jpeg"); */
-  background-position: center;
-
-  background-size: cover;
-  color: #ffd;
-  text-shadow: 2px 2px 8px #111;
-  text-align: center;
-
-
-}
-.intro h2{
-font-size: 34px;
-}
-.intro p{
-
-  padding: 2px;
-  line-height: 22px;
-  font-size: 23px;
-}
-#quality1{
-  margin-top: 20px;
-  margin-left: 7px;
-  display: flex;
-  justify-content: space-around;
-}
-#quality1 h3{
-  text-align: left;
-  margin-left: 10px;
-  font-size: 16px;
-}
-#quality1 img {
-  width: 60px;
-  height: 80px;
-}
-#quality2 img {
-  width: 60px;
-  height:80px;
-}
-#quality1 p{
-  display: hidden;
-  font-size: 16px;
-  text-align: left;
-  margin-left: 10px;
-  width:80%;
-  line-height: 20px;
-
-}
-#quality2{
- margin-top: 15px;
- margin-left: 7px;
- display: flex;
- justify-content: space-around;
- width:80%;
-}
-#quality2 h3{
-  text-align: left;
-  margin-left: 10px;
-  font-size: 16px;
-}
-#quality2 p{
- display: hidden;
- font-size: 16px;
- text-align: left;
- margin-left: 10px;
- line-height: 20px;
-}
-.signup-home{
-  text-align: center;
-  /* background-color:  #d3866e; */
-  border-radius: 8px;
-  margin:0 auto;
-  width:90%;
-
-}
-.signup-button{
-  background: #fb7064;
-  background: linear-gradient(#fb7064, #e74438);
-  border-radius:9px;
-  box-shadow: 0 3px #ab140a;
-  padding: 9px 20px;
-  color: #ffffff;
-  display: inline-block;
-  font:normal normal 21px/1 "Overlock", cursive;
-  text-align: center;
-  }
-.signup-button:hover {
-	background-color:#5cbf2a;
-}
-.signup-button:active {
-	position:relative;
-	top:1px;
-}
-.signup-home p{
-  color: #ffd;
-  font-size: 18px;
-  margin-bottom: 5px;
-
-
-}
-.margin{
-  margin:5px;
-  box-shadow: 0 3px 3px #5A2C8F;
-  height: 90%;
-  border-radius:4px;
-
-}
-.margin2{
-  margin:5px;
-  box-shadow: 0 5px 3px #5A2C8F;
-  height: 90%;
-  border-radius:5px;
-}
-.login-home{
-
-  color:#ffd;
-  border-radius: 8px;
-  margin:0 auto;
-  width:90%;
-  text-align: center;
-}
-.login-home p{
-  color: #ffd;
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-/* button design */
-
-.login-button{
-  background: #fb7064;
-  background: linear-gradient(#fb7064, #e74438);
-  border-radius:9px;
-  box-shadow: 0 3px #ab140a;
-  padding: 9px 20px;
-  color: #ffffff;
-  display: inline-block;
-  font:normal normal 21px/1 "Overlock", cursive;
-  text-align: center;
-  text-shadow:1px 1px #ab140a;
-  }
-
-  /* footer cs,used a grid with two columns where one ontains links and the other icons of popular site which yocan click to visit those site */
-
-.footer{
-  background-color: #57585C;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-}
-.footer-menu{
-  display:grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  align-items: center;
-  justify-content: center;
-}
-.footer-menu a{
-  color:#ffd;
-}
-.icons-home{
-  display: grid;
-  grid-template-columns: 100px;
-  grid-template-rows: 70px 70px;
-
-}
-.twitter-icon{
-  align-self: center;
-  justify-self:center;
-}
-.test1, .test2{
-  display:none;
-}
-.intro p:nth-child(odd){
-  display: none;
-}
-
-/* computer user design it differs the mobile design on the main part,the computer design contain many section which includes the intro section, two side section for login and signup
-and a testimony part to show user experience on the site   */
-@media only screen and (min-width:500px) {
-
-.wrapper{
-  grid-template-rows: 70px 12fr 3fr;
-  background-color: #9068be;
-
-}
-.header{
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-}
-
 .menu{
-  grid-template-columns:1fr 1fr 1fr 1fr;
-  grid-row: 10px;
-  align-items: center;}
-  .logo{
-    border-right: 2px solid #57585C;
-  }
-
-.main{
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas:"banner banner banner banner signup signup"
-                       "banner banner banner banner signup signup"
-                       "banner banner banner banner login login"
-                       "test1 test1 test2 test2  login login";
-
-/* background-color: #bea768; */
-
-
-}
-.intro{
-
-
-   /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bus.jpeg') no-repeat center cover fixed; */
-   background-position: center;
-  grid-area: banner;
-  border-radius: 5px;
-
-  display: block
-
-}
-.intro h2{
-  font-size: 60px;
-}
-.intro p{
-  font-size:40px;
-  line-height: 50px;
-}
-
-.service-quality{
-  display:flex;
-  justify-content: space-around;
-}
-
-#quality1{
-  margin-top: 70px;
-  margin-left: 15px;
   display: flex;
-  justify-content: space-around;
-}
-#quality1 h3{
-  text-align: left;
-  margin-left: 10px;
-  padding-bottom: 5px;
-  font-size: 23px;
-}
-#quality1 img {
-  width: 40px;
-}
-#quality2 img {
-  width: 40px;
-}
-#quality1 p{
-  font-size: 19px;
-  text-align: left;
-  margin-left: 10px;
-  width:80%;
-  line-height: 20px;
+  justify-content: flex-end;
+  align-items: center;
 
 }
-#quality2{
- margin-top: 70px;
- margin-left: 7px;
- display: flex;
- justify-content: space-around;
- width:80%;
+#about-menu{
+  margin-right: 40px;
 }
-#quality2 h3{
-  text-align: left;
-  margin-left: 10px;
-  padding-bottom: 5px;
-  font-size: 23px;
-}
-#quality2 p{
- display: hidden;
- font-size: 21px;
- text-align: left;
- margin-left: 10px;
- line-height: 20px;
+#signin-menu{
+  margin-right:15px;
+
 }
 
+
+main{
+  background-image:url(../images/woman.jpg);
+  height:100vh; 
+  background-position: center;
+  background-size: cover;
+  display:grid;
+  grid-template-rows:1fr 30px;
+}
+.words{
+  color:#112;
+  font-size: 38px;
+  font-weight: 600;
+  /* font-family: 'Luckiest Guy', cursive; */
+  font-family: 'Neuton', serif;
+  line-height: 40px;
+  width:350px;
+  margin-top: 70px;
+  margin-left: 60px;
+  text-align: left;
+}
 .signup-home{
-  grid-area:signup;
-  align-self: center;
-  justify-self:center;
-  height: 80%;
+  margin-left: 62px;
+  margin-top: 25px;
 }
-.signup-home p{
-  margin-top: 30px;
-  font-size: 25px;
+.signup-home input[type="email"], input[type="password"]{
+  border: none;
+  border: 1px solid #222;
+  /* background: transparent; */
+  background: rgba(0,0,0,0.7);
+  outline: none;
+  height: 35px;
+  width:310px;
+  color:#DAC7F0;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
-.login-home{
-  grid-area:login;
-  align-self: center;
-  justify-self:center;
-  height: 80%;
+.signup-home input[type="password"]{
+  margin-bottom: 13px;
 }
-
-
-.login-home p{
-  margin-top: 30px;
-  font-size: 25px;
+.signup-home  input[type="text"]{
+  margin-bottom: 5px;
+  width:150px; 
+  border: 1px solid #222;
+  /* background: transparent; */
+  background: rgba(0,0,0,0.7);
+  outline: none;
+  height: 30px;
+  color:#DAC7F0;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-right:5px;
+}
+::placeholder { 
+  color: #EFD0CD;
+  opacity: 0.8; 
+  padding-left: 12px;
+}
+.signup-home h3{
+    margin-bottom: 8px;
+    font-family: 'Neuton', serif;
+    font-size:21px;
+    color:#112;
+}
+.signup-home a{
+    text-decoration: none;
+    margin-left:50px;
+    color: #112;
+    font-size: 18px;
+    font-family: 'Neuton', serif;
+    font-weight: 600;
+    border: 2px solid #112;
+    padding:5px;
+    padding-bottom: 8px;
+    border-radius:7px;
+}
+.signup-home a:hover{
+  background: rgba(0,0,0,0.7);;
+    color:#ffd;
+    font-weight: 200;
 }
 .footer{
-  background-color: #57585C;
+  font-family: 'Neuton', serif;
+  display: flex;
+  justify-content: space-between;
+  width:300px;
+  
+  
 }
-.test1, .test2{
-  display:block;
+.footer-links{
+    display: flex;
+    justify-content: space-around;
+    
 }
-.test1, .test2{
-  grid-area:test1;
+.footer-links a{
+  text-decoration: none;
+  color:#112;
   font-size: 18px;
-  text-align: left;
-  color:#ffd;
+}
+#about{
+    margin-left: 50px;
+    margin-right:20px;
+}
+.icons {
+    margin-left:-45px;
+}
+.facebook{
+    margin-right:5px;
+}
+.footer img{
+  width: 30px;
+  
+}
+@media (min-width:450px) and (max-width:771px){
+    main{
+      background: url(../images/jesse-bowser-F3FtTLqzl18-unsplash.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+    .footer{
+      font-family: 'Neuton', serif;
+      display: flex;
+      justify-content: space-between;
+      width:100%;
+      font-size: 18px;
+      background: #fff;
+      
+    }
+    .twitter{
+        margin-right:20px;
+    }
 
 }
-.test1 , .test2 p{
-  margin-top: 5px;
+@media only screen and (max-width:440px){
+    main{
+      background: url(../images/jesse-bowser-F3FtTLqzl18-unsplash.jpg);
+      background-position: center;
+      background-size: cover;
+      height: 105vh; 
+      display:grid;
+  grid-template-rows:1fr 40px;
 
+    }
+    .signup-home{
+      margin-left: 62px;
+      margin-top: 40px;
 }
-.test2{
-  grid-area:test2;
+.words{
+  color:#112;
+  font-size: 38px;
+  font-weight: 600;
+  /* font-family: 'Luckiest Guy', cursive; */
+  font-family: 'Neuton', serif;
+  line-height: 40px;
+  width:80%;
+  margin-top: 70px;
+  margin-left: 40px;
+  text-align: left
+}
+.signup-home{
+  margin-left: 40px;
+  margin-top: 25px;
+}
+.footer{
+  font-family: 'Neuton', serif;
+  display: flex;
+  justify-content: space-around;
+  width:100%;
+  font-size: 18px;
+  background: #fff;
+  
+}
+}
 
-}
-}
