@@ -7,7 +7,7 @@ body {
   display: grid;
   width:100%;
   grid-template-columns: 1fr;
-  grid-template-rows: 50px 1fr;
+  grid-template-rows: 38px 1fr;
 }
 header {
   background-color: rgb(246, 242, 242);
@@ -89,8 +89,8 @@ header a {
 }
 main {
   background-image:url(../images/womanwall.png);
-  height:90vh;
-  background-attachment: fixed;
+  height:95vh;
+  /* background-attachment: fixed; */
   background-position: center;
   background-size: cover;
   display:grid;
