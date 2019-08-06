@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr 30px;
+  background: rgba(255, 255, 255, 0.787);
+}
+header {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+}
+.logo {
+  font-family: "Lobster", cursive;
+  font-size: 27px;
+  color: rgb(22, 22, 22);
+  align-self: center;
+  justify-self: center;
+}
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.menu a {
+  font-family: "Neuton", serif;
+  color: rgb(22, 22, 22);
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 20px;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+.trip-menu {
+  border: 1px solid #112;
+  padding: 5px;
+}
+
+.trips-available {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+.container {
+  width: 315px;
+  height: 570px;
+}
+.trips-header {
+  font-size: 23px;
+  font-family: "Neuton", serif;
+  text-align: center;
+}
+
+.trip {
+  background-color: #ffd;
+  width: 300px;
+  height: 550px;
+  box-shadow: 1px 3px 4px #112;
+  border-radius: 2px;
+  margin: auto;
+}
+.banner {
+  background-color: rgba(27, 27, 29, 0.876);
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price {
+  font-size: 60px;
+  color: #ffd;
+  text-align: center;
+  font-family: "Neuton", serif;
+}
+.orig-destin {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #112;
+  width: 95%;
+  margin: 0 auto;
+  /* border-bottom: 2px solid #112; */
+}
+.origin,
+.destination {
+  font-size: 23px;
+  font-family: "Neuton", serif;
+  line-height: 10px;
+}
+.origin {
+  padding-left: 13px;
+}
+.arrow {
+  padding-top: 5px;
+}
+.time {
+  display: flex;
+  justify-content: space-around;
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 3px;
+  font-size: 23px;
+  font-family: "Neuton", serif;
+  align-items: flex-start;
+  border-bottom: 2px solid #112;
+}
+.bus {
+  display: flex;
+  justify-content: space-around;
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 3px;
+  font-size: 23px;
+  font-family: "Neuton", serif;
+  align-items: flex-start;
+  border-bottom: 2px solid #112;
+}
+.trip-id {
+  display: flex;
+  justify-content: space-around;
+  width: 95%;
+  margin: 0 auto;
+  /* padding-bottom: 3px; */
+  font-size: 23px;
+  font-family: "Neuton", serif;
+  border-bottom: 2px solid #112;
+}
+.licence {
+  padding-left: 10px;
+}
+button {
+  text-decoration: none;
+  margin-left: 100px;
+  margin-top: 10px;
+  color: #112;
+  font-size: 18px;
+  font-family: "Neuton", serif;
+  font-weight: 600;
+  border: 2px solid #112;
+  background: transparent;
+  padding: 5px;
+  padding-bottom: 8px;
+  border-radius: 5px;
+  width: 100px;
+}
+button:hover {
+  cursor: pointer;
+  color: #ffd;
+  background: #112;
+}
+footer {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Neuton", serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  font-size: 18px;
+}
+
+#about {
+  margin-left: 50px;
+  margin-right: 30px;
+  color: #112;
+  font-weight: 500;
+  font-size: 22px;
+}
+#home {
+  color: #112;
+  font-weight: 500;
+  font-size: 22px;
+  align-self: center;
+}
+
+footer img {
+  width: 25px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 414px) {
+  header {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+  }
+  .logo {
+    font-family: "Lobster", cursive;
+    font-size: 27px;
+    color: rgb(22, 22, 22);
+    align-self: center;
+    justify-self: flex-start;
+    margin-left: 20px;
+  }
+  .menu a {
+    font-family: "Neuton", serif;
+    color: rgb(22, 22, 22);
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 10px;
+  }
+}
