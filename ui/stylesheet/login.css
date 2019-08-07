@@ -51,24 +51,6 @@ main {
   display: grid;
   align-items: center;
 }
-.login-section ::before {
-  width: 420px;
-  height: 500px;
-  z-index: -1;
-  box-shadow: inset 0 0 2000px rgba(214, 216, 224, 0.329);
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background: inherit;
-  filter: blur(30px);
-  margin: -20px;
-}
-/* form{
-  
-} */
 .login-section input[type="email"],
 input[type="password"] {
   border: none;
