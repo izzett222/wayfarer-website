@@ -1,4 +1,6 @@
 * {
+  margin:0;
+  padding:0;
   box-sizing: border-box;
   text-decoration: none;
 }
@@ -9,6 +11,7 @@ body {
   background: rgba(255, 255, 255, 0.787);
 }
 header {
+  background-color: rgb(246, 242, 242);
   display: grid;
   grid-template-columns: 170px 1fr;
 }
@@ -73,6 +76,7 @@ main {
   align-items: center;
 }
 .price {
+  
   font-size: 60px;
   color: #ffd;
   text-align: center;
@@ -80,6 +84,8 @@ main {
 }
 .orig-destin {
   display: flex;
+  align-items: center;
+  height: 77px;
   justify-content: space-around;
   padding-bottom: 3px;
   border-bottom: 2px solid #112;
@@ -101,6 +107,8 @@ main {
 }
 .time {
   display: flex;
+  align-items: center;
+  height: 77px;
   justify-content: space-around;
   width: 95%;
   margin: 0 auto;
@@ -112,6 +120,8 @@ main {
 }
 .bus {
   display: flex;
+  align-items: center;
+  height: 77px;
   justify-content: space-around;
   width: 95%;
   margin: 0 auto;
@@ -123,6 +133,8 @@ main {
 }
 .trip-id {
   display: flex;
+  align-items: center;
+  height: 77px;
   justify-content: space-around;
   width: 95%;
   margin: 0 auto;
@@ -165,6 +177,7 @@ button:hover {
   background: #112;
 }
 footer {
+  justify-self: center;
   display: flex;
   justify-content: space-around;
   font-family: "Neuton", serif;
