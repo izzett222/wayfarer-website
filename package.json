@@ -1,0 +1,44 @@
+{
+  "name": "wayfarer-website",
+  "version": "1.0.0",
+  "description": "a public bus transportation booking service\r ---\r permalink: /index.html\r ---",
+  "main": "server.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha --require @babel/register --require @babel/polyfill --timeout 100000 server/test/ --exit",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/izzett222/wayfarer-website.git"
+  },
+  "author": "Ishimwe Serge Izzeddin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/izzett222/wayfarer-website/issues"
+  },
+  "homepage": "https://github.com/izzett222/wayfarer-website#readme",
+  "dependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "coveralls": "^3.0.6",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.2",
+    "express": "^4.17.1",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^6.2.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.1",
+    "nyc": "^14.1.1"
+  }
+}
