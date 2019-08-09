@@ -6,6 +6,6 @@ cashe:
   directories:
     - node_modules
 script:
-  -npm test
+  - npm test
 after_success:
-  -npm run coveralls
+  - npm run coveralls
