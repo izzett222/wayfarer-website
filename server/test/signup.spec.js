@@ -11,8 +11,7 @@ describe("it should sign the user into the user object", () => {
       first_name: "izzeddin",
       last_name: "ishimwe",
       email: "ishimweserg@gmail.com",
-      password: "izzeddin",
-      is_admin: false
+      password: "izzeddin"
     };
     chai
       .request(app)
@@ -28,8 +27,7 @@ describe("it should sign the user into the user object", () => {
       first_name: "izzeddin",
       last_name: "ishimwe",
       email: "ishimweserg@gmail.com",
-      password: "izzeddin",
-      is_admin: false
+      password: "izzeddin"
     };
     chai
       .request(app)
@@ -48,7 +46,6 @@ describe("it should sign the user into the user object", () => {
         last_name: "ishimwe",
         email: "ishimweserg@gmail.com",
         password: "izzeddin",
-        is_admin: false
       };
       chai
         .request(app)

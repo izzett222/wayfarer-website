@@ -6,6 +6,7 @@ import {
 
 export default class TripsControl {
   static allTrips(req, res, next) {
+    if(trips.length === 0) return res.status(404).json({status:400,error:"not trips is available at the moment"})
     const status = 200;
     res.status(status).json({
       status,
@@ -13,6 +14,7 @@ export default class TripsControl {
     });
   }
   static individualTrip(req, res, next) {
+    if(trips.length === 0) return res.status(404).json({status:400,error:"not trips is available at the moment"})
     const trip = trips.find(t => t.trip_id === parseInt(req.params.trip_id));
     if (!trip) {
       const status = 404;

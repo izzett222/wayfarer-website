@@ -13,14 +13,11 @@ describe("user can view trips", () => {
     const user = {
       first_name: "izzedddin",
       last_name: "ishidmwe",
-      email: "ishimwesesdrg@gmail.com",
+      email: "iizzeddi@gmail.com",
       password: "izzseddin",
-      is_admin: true
+      
     };
-    const token = jwt.sign(
-      { user_id: users.length + 1, email: user.email, is_admin: user.is_admin },
-      "izzeddin"
-    );
+    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImlpenplZGRpbjYyQGdtYWlsLmNvbSIsImlzX2FkbWluIjp0cnVlLCJpYXQiOjE1NjUzNDMxNTV9.tKjW5uMIG61nGhufJ5Rg3LQc6gKIZsv1vs-VbNh5wDs"
 
     chai
       .request(app)
@@ -49,10 +46,7 @@ describe("user can view an individual trip", () => {
       password: "izzseddin",
       is_admin: true
     };
-    const token = jwt.sign(
-      { user_id: users.length + 1, email: user.email, is_admin: user.is_admin },
-      "izzeddin"
-    );
+    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImlpenplZGRpbjYyQGdtYWlsLmNvbSIsImlzX2FkbWluIjp0cnVlLCJpYXQiOjE1NjUzNDMxNTV9.tKjW5uMIG61nGhufJ5Rg3LQc6gKIZsv1vs-VbNh5wDs"
 
     chai
       .request(app)
@@ -71,10 +65,7 @@ describe("user can view an individual trip", () => {
       password: "izzseddin",
       is_admin: true
     };
-    const token = jwt.sign(
-      { user_id: users.length + 1, email: user.email, is_admin: user.is_admin },
-      "izzeddin"
-    );
+    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImlpenplZGRpbjYyQGdtYWlsLmNvbSIsImlzX2FkbWluIjp0cnVlLCJpYXQiOjE1NjUzNDMxNTV9.tKjW5uMIG61nGhufJ5Rg3LQc6gKIZsv1vs-VbNh5wDs"
 
     chai
       .request(app)
@@ -105,10 +96,7 @@ describe("admin can create trips", () => {
       is_admin: true,
       trip_date: "2019-12-23"
     };
-    const token = jwt.sign(
-      { user_id: users.length + 1, email: user.email, is_admin: user.is_admin },
-      "izzeddin"
-    );
+    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImlpenplZGRpbjYyQGdtYWlsLmNvbSIsImlzX2FkbWluIjp0cnVlLCJpYXQiOjE1NjUzNDMxNTV9.tKjW5uMIG61nGhufJ5Rg3LQc6gKIZsv1vs-VbNh5wDs"
     const trip = {
       seating_capacity: 30,
       bus_license_number: "rac 123",

