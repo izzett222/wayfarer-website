@@ -1,8 +1,10 @@
-import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
-import { users } from '../models/users';
-import
-{ validateNewUser, validateLoggingUser } from '../helpers/validators/usersValidator';
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import { users } from "../models/users";
+import {
+  validateNewUser,
+  validateLoggingUser
+} from "../helpers/validators/usersValidator";
 
 export default class Users {
   static async signupUser(req, res) {
@@ -12,7 +14,7 @@ export default class Users {
       const status = 400;
       return res.status(status).json({
         status,
-        error: error.details[0].message,
+        error: error.details[0].message
       });
     }
     const user = users.find(c => c.email === req.body.email);
@@ -20,7 +22,7 @@ export default class Users {
       const status = 400;
       return res.status(status).json({
         status,
-        error: 'email already taken',
+        error: "email already taken"
       });
     }
     const newUser = {
@@ -29,11 +31,15 @@ export default class Users {
       last_name: req.body.last_name,
       email: req.body.email,
       password: await bcrypt.hash(req.body.password, 10),
-      is_admin: req.body.is_admin,
+      is_admin: req.body.is_admin
     };
     const token = jwt.sign(
-      { user_id: newUser.user_id, email: newUser.email, is_admin: newUser.is_admin },
-      /* get("jwtPrivateKey") */ 'izzeddin',
+      {
+        user_id: newUser.user_id,
+        email: newUser.email,
+        is_admin: newUser.is_admin
+      },
+      /* get("jwtPrivateKey") */ "izzeddin"
     );
     users.push(newUser);
     const status = 201;
@@ -44,8 +50,8 @@ export default class Users {
         user_id: newUser.user_id,
         first_name: newUser.first_name,
         last_name: newUser.last_name,
-        email: newUser.email,
-      },
+        email: newUser.email
+      }
     });
   }
 
@@ -56,7 +62,7 @@ export default class Users {
       const status = 400;
       return res.status(status).json({
         status,
-        error: error.details[0].message,
+        error: error.details[0].message
       });
     }
     const user = users.find(c => c.email === body.email);
@@ -64,7 +70,7 @@ export default class Users {
       const status = 404;
       return res.status(status).json({
         status,
-        error: 'invalid email or password',
+        error: "invalid email or password"
       });
     }
     const validPassword = await bcrypt.compare(body.password, user.password);
@@ -73,13 +79,13 @@ export default class Users {
       const status = 400;
       return res.status(status).json({
         status,
-        error: 'invalid password or email',
+        error: "invalid password or email"
       });
     }
 
     const token = jwt.sign(
       { user_id: user.user_id, email: user.email, is_admin: user.is_admin },
-      /* get("jwtPrivateKey") */ 'izzeddin',
+      /* get("jwtPrivateKey") */ "izzeddin"
     );
     const status = 200;
     res.status(200).json({
@@ -88,8 +94,8 @@ export default class Users {
         token,
         first_name: user.first_name,
         last_name: user.last_name,
-        email: user.email,
-      },
+        email: user.email
+      }
     });
   }
 }

@@ -1,4 +1,7 @@
+// {
+//   "presets": ["@babel/preset-env"]
+// }
 {
-  "presets": ["@babel/preset-env"],
-  "plugins":["transform-runtime"]
+  "presets": ["airbnb","@babel/preset-env"],
+  "plugins":[["@babel/transform-runtime"]]
 }
