@@ -3,6 +3,7 @@ import { trips } from "../models/trips";
 import { validatebooking } from "../helpers/validators/bookingValidator";
 export default class BookingControl {
   static allBookings(req, res, next) {
+    if(bookings.length < 0) return res.status(404).json({status:400,error:"not bookings is available at the moment"})
     return res.status(200).json({ status: 200, data: bookings });
   }
 
@@ -14,7 +15,7 @@ export default class BookingControl {
         .json({ status: 400, error: error.details[0].message });
     }
     const yourBookings = bookings.filter(c => {
-      return c.user_id === req.user.id;
+      return c.user_id === parseInt(req.user.user_id);
     });
     const booking = yourBookings.find(c => {
       return c.trip_id === req.body.trip_id;
@@ -25,7 +26,10 @@ export default class BookingControl {
         error: "you already booked this trip"
       });
     }
-    const trip = trips.find(c => c.trip_id === req.body.trip_id);
+    const trip = trips.find(c => {return c.trip_id === req.body.trip_id});
+    console.log(trip)
+    console.log(req.body.trip_id)
+    console.log(trips);
     if (!trip)
       return res
         .status(404)

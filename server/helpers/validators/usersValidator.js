@@ -16,8 +16,7 @@ export const validateNewUser = user => {
     password: Joi.string()
       .trim()
       .min(4)
-      .required(),
-    is_admin: Joi.boolean().strict()
+      .required()
   });
   return Joi.validate(user, schema);
 };
