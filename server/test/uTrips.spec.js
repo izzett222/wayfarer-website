@@ -24,7 +24,7 @@ describe("user can view trips", () => {
 
     chai
       .request(app)
-      .get("/api/trips")
+      .get("/api/v1/trips")
       .set("token", token)
       .end((err, res) => {
         expect(res.statusCode).to.equal(200);
@@ -34,7 +34,7 @@ describe("user can view trips", () => {
   it("unlogged user can not access resources", () => {
     chai
       .request(app)
-      .get("/api/trips")
+      .get("/api/v1/trips")
       .end((err, res) => {
         expect(res.statusCode).to.equal(401);
       });
@@ -56,7 +56,7 @@ describe("user can view an individual trip", () => {
 
     chai
       .request(app)
-      .get("/api/trips/1")
+      .get("/api/v1/trips/1")
       .set("token", token)
       .end((err, res) => {
         expect(res.statusCode).to.equal(200);
@@ -78,7 +78,7 @@ describe("user can view an individual trip", () => {
 
     chai
       .request(app)
-      .get("/api/trips/145")
+      .get("/api/v1/trips/145")
       .set("token", token)
       .end((err, res) => {
         expect(res.statusCode).to.equal(404);
@@ -89,7 +89,7 @@ describe("user can view an individual trip", () => {
   it("unlogged user can not access resources", () => {
     chai
       .request(app)
-      .get("/api/trips/1")
+      .get("/api/v1/trips/1")
       .end((err, res) => {
         expect(res.statusCode).to.equal(401);
       });
@@ -120,7 +120,7 @@ describe("admin can create trips", () => {
 
     chai
       .request(app)
-      .post("/api/trips/")
+      .post("/api/v1/trips/")
       .set("token", token)
       .send(trip)
       .end((err, res) => {
@@ -150,7 +150,7 @@ describe("admin can create trips", () => {
 
     chai
       .request(app)
-      .post("/api/trips/")
+      .post("/api/v1/trips/")
       .set("token", token)
       .send(trip)
       .end((err, res) => {
@@ -176,7 +176,7 @@ describe("admin can cancel a trip", () => {
 
     chai
       .request(app)
-      .patch("/api/trips/2/cancel")
+      .patch("/api/v1/trips/2/cancel")
       .set("token", token)
       .send({ status: "cancelled" })
       .end((err, res) => {
@@ -199,7 +199,7 @@ describe("admin can cancel a trip", () => {
 
     chai
       .request(app)
-      .patch("/api/trips/2/cancel")
+      .patch("/api/v1/trips/2/cancel")
       .set("token", token)
       .send({ status: "" })
       .end((err, res) => {
@@ -223,7 +223,7 @@ describe("admin can cancel a trip", () => {
 
     chai
       .request(app)
-      .patch("/api/trips/2/cancel")
+      .patch("/api/v1/trips/2/cancel")
       .set("token", token)
       .send({ status: "cancelled" })
       .end((err, res) => {
@@ -247,7 +247,7 @@ describe("admin can cancel a trip", () => {
 
     chai
       .request(app)
-      .patch("/api/trips/1/cancel")
+      .patch("/api/v1/trips/1/cancel")
       .set("token", `${token} ndenjwenwjbfjaw`)
       .send({ status: "cancelled" })
       .end((err, res) => {
@@ -271,7 +271,7 @@ describe("admin can cancel a trip", () => {
 
     chai
       .request(app)
-      .patch("/api/trips/2/cancel")
+      .patch("/api/v1/trips/2/cancel")
       .set("token", token)
       .send({ status: "cancelled" })
       .end((err, res) => {
@@ -295,7 +295,7 @@ describe("admin can cancel a trip", () => {
 
     chai
       .request(app)
-      .patch("/api/trips/20/cancel")
+      .patch("/api/v1/trips/20/cancel")
       .set("token", `${token} ndenjwenwjbfjaw`)
       .send({ status: "cancelled" })
       .end((err, res) => {

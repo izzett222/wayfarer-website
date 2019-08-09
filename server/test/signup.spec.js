@@ -16,7 +16,7 @@ describe("it should sign the user into the user object", () => {
     };
     chai
       .request(app)
-      .post("/api/auth/signup")
+      .post("/api/v1/auth/signup")
       .send(user)
       .end((err, res) => {
         expect(res.statusCode).to.equal(201);
@@ -33,7 +33,7 @@ describe("it should sign the user into the user object", () => {
     };
     chai
       .request(app)
-      .post("/api/auth/signup")
+      .post("/api/v1/auth/signup")
       .send(user)
       .end((err, res) => {
         expect(res.statusCode).to.equal(400);
@@ -52,7 +52,7 @@ describe("it should sign the user into the user object", () => {
       };
       chai
         .request(app)
-        .post("/api/auth/signup")
+        .post("/api/v1/auth/signup")
         .send(user)
         .end((err, res) => {
           expect(res.statusCode).to.equal(400);

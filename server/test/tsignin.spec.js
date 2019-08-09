@@ -14,7 +14,7 @@ describe("user can signin after authorization", () => {
     };
     chai
       .request(app)
-      .post("/api/auth/signin")
+      .post("/api/v1/auth/signin")
       .send(user)
       .end((err, res) => {
         expect(res.statusCode).to.equal(200);

@@ -24,7 +24,7 @@ describe("user can view bookings", () => {
 
     chai
       .request(app)
-      .get("/api/booking")
+      .get("/api/v1/booking")
       .set("token", token)
       .end((err, res) => {
         expect(res.statusCode).to.equal(200);
@@ -51,7 +51,7 @@ describe("user can book trips", () => {
     };
     chai
       .request(app)
-      .post("/api/booking")
+      .post("/api/v1/booking")
       .send(book)
       .set("token", token)
       .end((err, res) => {
@@ -77,7 +77,7 @@ describe("user can book trips", () => {
     };
     chai
       .request(app)
-      .post("/api/booking")
+      .post("/api/v1/booking")
       .send(book)
       .set("token", token)
       .end((err, res) => {
@@ -102,7 +102,7 @@ describe("user can book trips", () => {
     };
     chai
       .request(app)
-      .post("/api/booking")
+      .post("/api/v1/booking")
       .send(book)
       .set("token", token)
       .end((err, res) => {
@@ -128,7 +128,7 @@ describe("user can book trips", () => {
     };
     chai
       .request(app)
-      .post("/api/booking")
+      .post("/api/v1/booking")
       .send(book)
       .set("token", token)
       .end((err, res) => {
@@ -153,7 +153,7 @@ describe("user can delete his/her booking", () => {
     );
     chai
       .request(app)
-      .delete("/api/booking/7")
+      .delete("/api/v1/booking/7")
       .set("token", token)
       .end((err, res) => {
         expect(res.statusCode).to.equal(200);
@@ -175,7 +175,7 @@ describe("user can delete his/her booking", () => {
     );
     chai
       .request(app)
-      .delete("/api/booking/15")
+      .delete("/api/v1/booking/15")
       .send()
       .set("token", token)
       .end((err, res) => {
