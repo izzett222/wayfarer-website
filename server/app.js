@@ -3,7 +3,10 @@ import morgan from "morgan";
 import {error} from "celebrate";
 import users from "./routes/usersRoute";
 import trips from "./routes/tripsRoute";
-import booking from "./routes/bookingRoute"
+import booking from "./routes/bookingRoute";
+
+
+
 // import  "config" from "config";
 const app = express();
 app.use(morgan("tiny"));

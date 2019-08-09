@@ -1,0 +1,413 @@
+{
+  "swagger": "2.0",
+  "info": {
+   "description": "this  a public bus booking platform",
+   "version": "v1",
+   "title": "WayFarer APIs docs",
+   "termsOfService": "http://swagger.io/terms/",
+   "contact": {
+    "email": "iizzeddin62@gmail.com"
+   }
+  },
+  "host": "127.0.0.1:5000",
+  "basePath": "/api/v1",
+  "tags": [
+   {
+    "name": "user",
+    "description": "User Authentication API"
+   },
+   {
+    "name": "Trip",
+    "description": "able trips to view,trips"
+   },
+   {
+    "name": "Booking",
+    "description": "Create, view, cancel bookings",
+    "externalDocs": {
+     "description": "Find out more",
+     "url": "https://github.com/victorkarangwa4/WayFarer/tree"
+    }
+   }
+  ],
+  "schemes": [
+   "http",
+   "https"
+  ],
+  "paths": {
+   "/auth/signup": {
+    "post": {
+     "tags": [
+      "user"
+     ],
+     "summary": "Create user account",
+     "description": "",
+     "operationId": "signup",
+     "consumes": [
+      "application/json",
+      "application/xml"
+     ],
+     "produces": [
+      "application/xml",
+      "application/json"
+     ],
+     "parameters": [
+      {
+       "in": "body",
+       "name": "body",
+       "description": "new users are signed into the website",
+       "required": true,
+       "schema": {
+        "$ref": "#/definitions/signup"
+       }
+      }
+     ],
+     "responses": {
+      "201": {
+       "description": "Account Created Successfully"
+      }
+     }
+    }
+   },
+   "/auth/signin": {
+    "post": {
+     "tags": [
+      "user"
+     ],
+     "summary": "login  user",
+     "description": "",
+     "operationId": "signin",
+     "consumes": [
+      "application/json",
+      "application/xml"
+     ],
+     "produces": [
+      "application/xml",
+      "application/json"
+     ],
+     "parameters": [
+      {
+       "in": "body",
+       "name": "body",
+       "description": "User who wants to login ",
+       "required": true,
+       "schema": {
+        "$ref": "#/definitions/signin"
+       }
+      }
+     ],
+     "responses": {
+      "201": {
+       "description": "logged in successful"
+      }
+     }
+    }
+   },
+   "/trips": {
+    "post": {
+     "tags": [
+      "Trip"
+     ],
+     "summary": "Admin creates new trip",
+     "description": "",
+     "operationId": "create-trip",
+     "produces": [
+      "application/xml",
+      "application/json"
+     ],
+     "parameters": [
+      {
+       "name": "token",
+       "in": "header",
+       "type": "string",
+       "description": "The value to provide in the  header of the creste  API request"
+      },
+      {
+       "name": "Trip details",
+       "in": "body",
+       "required": true,
+       "schema": {
+        "$ref": "#/definitions/trip"
+       }
+      }
+     ],
+     "responses": {
+      "201": {
+       "description": "Trip created successfully"
+      }
+     }
+    },
+    "get": {
+     "tags": [
+      "Trip"
+     ],
+     "summary": "Both admin and users can view all trips",
+     "description": "",
+     "operationId": "get-trips",
+     "consumes": [
+      "application/json",
+      "application/xml"
+     ],
+     "produces": [
+      "application/xml",
+      "application/json"
+     ],
+     "parameters": [
+      {
+       "name": "token",
+       "in": "header",
+       "type": "string",
+       "description": "The value to provide in the  header of get trips API request",
+       "required": true
+      }
+     ],
+     "responses": {
+      "200": {
+       "description": "Trips viewed"
+      }
+     }
+    }
+   },
+   "/trips/{trip_id}/cancel": {
+    "patch": {
+     "tags": [
+      "Trip"
+     ],
+     "summary": "Admin cancel trip",
+     "description": "Admin is only allowed to cancel trip with given ID",
+     "parameters": [
+      {
+       "name": "token",
+       "in": "header",
+       "description": "The user token",
+       "required": true
+      },
+      {
+       "name": "trip_id",
+       "in": "path",
+       "description": "trip id",
+       "required": true,
+       "type": "integer"
+      }
+     ],
+     "produces": [
+      "application/json"
+     ],
+     "responses": {
+      "200": {
+       "description": "Success: trip cancelled successfully"
+      }
+     }
+    }
+   },
+   "/trips/{trip_id}": {
+    "get": {
+     "tags": [
+      "Trip"
+     ],
+     "summary": "Both Admin and Users can see a specific trip",
+     "description": "",
+     "operationId": "get-specific-trip",
+     "consumes": [
+      "application/json",
+      "application/xml"
+     ],
+     "produces": [
+      "application/xml",
+      "application/json"
+     ],
+     "parameters": [
+      {
+       "name": "token",
+       "in": "header",
+       "type": "string",
+       "description": " API request header",
+       "required": true
+      },
+      {
+       "name": "trip_id",
+       "in": "path",
+       "description": "trip id",
+       "required": true,
+       "type": "integer"
+      }
+     ],
+     "responses": {
+      "200": {
+       "description": "success:"
+      }
+     }
+    }
+   },
+   "/bookings": {
+    "post": {
+     "tags": [
+      "Booking"
+     ],
+     "summary": "User can book a trip",
+     "description": "users can choose a trip of their choice and book it for travels",
+     "operationId": "book-trip",
+     "produces": [
+      "application/xml",
+      "application/json"
+     ],
+     "parameters": [
+      {
+       "name": "token",
+       "in": "header",
+       "type": "string",
+       "description": "API request header"
+      },
+      {
+       "name": "Trip details",
+       "in": "body",
+       "required": true,
+       "schema": {
+        "$ref": "#/definitions/booking"
+       }
+      }
+     ],
+     "responses": {
+      "201": {
+       "description": "Booking created successfully"
+      }
+     }
+    },
+    "get": {
+     "tags": [
+      "Booking"
+     ],
+     "summary": "View bookings",
+     "description": "An Admin can see all bookings, while user can see all of his/her bookings.",
+     "operationId": "view-booking",
+     "produces": [
+      "application/xml",
+      "application/json"
+     ],
+     "parameters": [
+      {
+       "name": "token",
+       "in": "header",
+       "type": "string",
+       "description": " API request header"
+      }
+     ],
+     "responses": {
+      "200": {
+       "description": "booking viewed successfully"
+      }
+     }
+    }
+   },
+   "/bookings/{id}": {
+    "delete": {
+     "tags": [
+      "Booking"
+     ],
+     "summary": "User can delete a booking",
+     "description": "",
+     "operationId": "delete-booking",
+     "produces": [
+      "application/xml",
+      "application/json"
+     ],
+     "parameters": [
+      {
+       "name": "token",
+       "in": "header",
+       "type": "string",
+       "description": " API request header"
+      },
+      {
+       "name": "trip_id",
+       "in": "path",
+       "required": true
+      }
+     ],
+     "responses": {
+      "201": {
+       "description": "Booking created successfully"
+      }
+     }
+    }
+   }
+  },
+  "definitions": {
+   "signup": {
+    "type": "object",
+    "properties": {
+     "first_name": {
+      "type": "string"
+     },
+     "last_name": {
+      "type": "string"
+     },
+     "email": {
+      "type": "string"
+     },
+     "password": {
+      "type": "string"
+     },
+     "is_admin": {
+      "type": "boolean"
+     }
+    },
+    "xml": {
+     "name": "User Signup"
+    }
+   },
+   "signin": {
+    "type": "object",
+    "properties": {
+     "email": {
+      "type": "string"
+     },
+     "password": {
+      "type": "string"
+     }
+    },
+    "xml": {
+     "name": "User Signin"
+    }
+   },
+   "trip": {
+    "type": "object",
+    "properties": {
+     "seating_capacity": {
+      "type": "integer"
+     },
+     "bus_license_number": {
+      "type": "string"
+     },
+     "origin": {
+      "type": "string"
+     },
+     "destination": {
+      "type": "string"
+     },
+     "trip_date": {
+      "type": "string"
+     },
+     "fare": {
+      "type": "integer"
+     },
+     "status": {
+      "type": "integer"
+     }
+    },
+    "xml": {
+     "name": "Trip"
+    }
+   },
+   "booking": {
+    "type": "object",
+    "properties": {
+     "trip_id": {
+      "type": "integer"
+     }
+    },
+    "xml": {
+     "name": "Trip"
+    }
+   }
+  }
+ }
